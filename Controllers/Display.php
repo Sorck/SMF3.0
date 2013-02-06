@@ -19,6 +19,10 @@ class Display extends Controller
 {
     public function main()
     {
+        // Get the topic we're in
+        $id_topic = (int) $this->_app['router']->getMatch('id_topic');
+        // Get the page we're on
+        $id_page = (int) ($this->_app['router']->getMatch('id_page') ?: 0);
         // @todo
     }
 }

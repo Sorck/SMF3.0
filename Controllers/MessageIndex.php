@@ -19,6 +19,10 @@ class MessageIndex extends Controller
 {
     public function main()
     {
+        // Get the board we're in
+        $id_board = (int) $this->_app['router']->getMatch('id_board');
+        // Get the page we're on
+        $id_page = (int) ($this->_app['router']->getMatch('id_page') ?: 0);
         // @todo
     }
 }
