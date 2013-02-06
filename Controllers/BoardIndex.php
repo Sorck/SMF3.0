@@ -5,7 +5,7 @@
  *
  * @package SMF
  * @author Simple Machines http://www.simplemachines.org
- * @copyright 2011 Simple Machines
+ * @copyright 2013 Simple Machines
  * @license http://www.simplemachines.org/about/smf/license.php BSD
  *
  * @version 3.0 Alpha 1

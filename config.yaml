@@ -5,16 +5,16 @@ author:
     name: Simple Machines
     email: norv@simplemachines.org
     website: http://simplemachines.org
-template_ns: smf
-language_ns: smf
-namespace: \smCore\modules\smf
+namespaces:
+    php: smCore\modules\smf
+    lang: smf
+    template: smf
+
 routes:
     boardindex:
-        title: boardindex
-        controller: smCore\modules\smf\BoardIndexController
-        order: 30
-        visible: true
-        resource: [role, member]
+        match: forum
+        controller: BoardIndex
+        method: main
 events:
     smCore.post_router:
         callback: [\smCore\modules\smf\helpers\Loader.php, postRouter]
