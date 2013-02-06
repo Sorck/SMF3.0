@@ -16,11 +16,11 @@ routes:
         controller: BoardIndex
         method: main
     messageindex:
-        match: [forum/board/:id, forum/board/:id/page/:id_page]
+        match: [forum/board/:id_board, forum/board/:id_board/page/:id_page]
         controller: MessageIndex
         method: main
     display:
-        match: [forum/topic/:id, forum/topic/:id/page/:id_page]
+        match: [forum/topic/:id_topic, forum/topic/:id_topic/page/:id_page]
         controller: Display
         method: main
 
