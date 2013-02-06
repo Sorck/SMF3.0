@@ -25,4 +25,3 @@ events:
     smCore.core_user_groups_loaded:
         callback: [\smCore\modules\smf\helpers\ForumMember.php, coreGroupsLoaded]
         enabled: true
-
