@@ -15,6 +15,15 @@ routes:
         match: forum
         controller: BoardIndex
         method: main
+    messageindex:
+        match: [forum/board/:id, forum/board/:id/page/:id_page]
+        controller: MessageIndex
+        method: main
+    display:
+        match: [forum/topic/:id, forum/topic/:id/page/:id_page]
+        controller: Display
+        method: main
+
 events:
     smCore.post_router:
         callback: [\smCore\modules\smf\helpers\Loader.php, postRouter]
