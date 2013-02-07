@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% set page_title = "Forum" %}
+
+{% block body %}
+    {# Iterate through all categories #}
+    {% for category in categories %}
+        {# Display info about the category #}
+        {% for board in category.boards %}
+            {# Show board info #}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
