@@ -19,6 +19,11 @@ class BoardIndex extends Controller
 {
     public function main()
     {
+        $data = $this->module->getStorage('BoardIndex')->main();
         // @todo
+        
+        return $this->module->render('smf/BoardIndex', array(
+                'categories' => $data,
+            ));
     }
 }
