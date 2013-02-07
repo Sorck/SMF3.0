@@ -22,7 +22,7 @@ class BoardIndex extends Controller
         $data = $this->module->getStorage('BoardIndex')->main();
         // @todo
         
-        return $this->module->render('smf/BoardIndex', array(
+        return $this->module->render('BoardIndex', array(
                 'categories' => $data,
             ));
     }
