@@ -24,5 +24,12 @@ class Display extends Controller
         // Get the page we're on
         $id_page = (int) ($this->_app['router']->getMatch('id_page') ?: 0);
         // @todo
+        
+        $data = $this->module->getStorage('Topics')->main($id_topic, $id_page);
+        // @todo
+        
+        return $this->module->render('Display', array(
+                'topic' => $data,
+            ));
     }
 }
