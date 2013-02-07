@@ -13,12 +13,13 @@
 
 namespace smCore\Modules\smf\Storage;
 
-use smCore\Module\Storage;
+use smCore\Module\Storage, smCore\Modules\smf\Models\Category;
 
-class Posts extends Storage
+class Category extends Storage
 {
-    public function getByID($id_post)
+    public function getByID(smCore\Modules\smf\Models\Category $id_post)
     {
         // @todo
     }
+    public function save()
 }

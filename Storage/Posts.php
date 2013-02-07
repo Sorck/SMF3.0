@@ -15,7 +15,7 @@ namespace smCore\Modules\smf\Storage;
 
 use smCore\Module\Storage;
 
-class Posts extends Storage
+class Post extends Storage
 {
     public function getByID($id_post)
     {

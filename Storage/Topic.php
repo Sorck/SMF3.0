@@ -15,7 +15,7 @@ namespace smCore\Modules\smf\Storage;
 
 use smCore\Module\Storage;
 
-class Topic extends Storage
+class Topics extends Storage
 {
     public function getByID($id_topic)
     {

@@ -13,15 +13,19 @@
 
 namespace smCore\Modules\smf\Storage;
 
-use smCore\Module\Storage;
+use smCore\Module\Storage, smCore\smf\Models\Board;
 
-class Board extends Storage
+class Boards extends Storage
 {
     public function getByID($id_board)
     {
         // @todo
     }
     public function getByName($name)
+    {
+        // @todo
+    }
+    public function save(Board $board)
     {
         // @todo
     }
