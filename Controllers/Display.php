@@ -25,7 +25,7 @@ class Display extends Controller
         $id_page = (int) ($this->_app['router']->getMatch('id_page') ?: 0);
         // @todo
         
-        $data = $this->module->getStorage('Topics')->main($id_topic, $id_page);
+        $data = $this->module->getStorage('Topics')->getByID($id_topic, $id_page);
         // @todo
         
         return $this->module->render('Display', array(
