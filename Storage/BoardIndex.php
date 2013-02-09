@@ -21,7 +21,7 @@ class BoardIndex extends Storage
     {
         // @todo Make sure user can see the board(s) in question.
         // Get the board index data
-        $res = $this->_app['db']('SELECT c.*, b.*
+        $res = $this->_app['db']->query('SELECT c.*, b.*
             FROM {db_prefix}smf_categories AS c, {db_prefix}smf_boards AS b
             WHERE c.id_category = b.id_category
             ORDER BY b.id_before, c.id_before');
