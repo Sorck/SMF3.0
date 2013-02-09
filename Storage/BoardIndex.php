@@ -19,6 +19,22 @@ class BoardIndex extends Storage
 {
     public function main()
     {
-        // @todo
+        // @todo Make sure user can see the board(s) in question.
+        // Get the board index data
+        $res = $this->_app['db']('SELECT c.*, b.*
+            FROM {db_prefix}smf_categories AS c, {db_prefix}smf_boards AS b
+            WHERE c.id_category = b.id_category
+            ORDER BY b.id_before, c.id_before');
+        while ($row = $res->fetchRow())
+        {
+            if (!isset($data[$row['id_category']]))
+            {
+                $data[$row['id_category']] = $this->module->getModel('Category');
+                $data[$row['id_category']]->setRawData(array('boards' => array()));
+            }
+            $data[$row['id_category']]['boards'][$row['id_board']] = $this->module->getModel('Board');
+            $data[$row['id_category']]['boards'][$row['id_board']]->setRawData($row);
+        }
+        return $data;
     }
 }

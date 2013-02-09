@@ -8,6 +8,7 @@
         {# Display info about the category #}
         {% for board in category.boards %}
             {# Show board info #}
+            {{ lang('smf.name_board.' ~ board.id_board) }}
         {% endfor %}
     {% endfor %}
 {% endblock %}

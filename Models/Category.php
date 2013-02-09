@@ -16,20 +16,15 @@
 namespace smCore\Modules\smf\Storage;
 
 use smCore\Module\Model;
+use ArrayAccess;
 
-class Category extends Model
+class Category extends Model implements ArrayAccess
 {
-    protected $_data;
-    public $boards;
-    
     public function setData(array $data)
     {
-        
+        // @todo
     }
-    public function setRawData(array $data)
-    {
-        
-    }
+    
     public function save()
     {
         $this->module->getStorage('Category')->save($this);
